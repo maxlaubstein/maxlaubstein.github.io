@@ -5,19 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max Laubstein</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        body, h1, p {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
-        h1 {
-            margin-top: 20%;
-            font-size: 3em;
+            
+        body {
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 80vh;
+            object-fit: cover;
+        }
+        
+        .content {
+            padding: 40px 20px;
+        }   
+    
+        .content h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <h1>Max Laubstein</h1>
+    <header>
+        Max Laubstein
+    </header>
+            
+    <img src="../chiatovich.png" alt="Max Laubstein" class="hero-image">
+            
+    <div class="content">
+        <h2>About Me</h2>
+        <p>
+        I am an undergraduate studying evolutionary biology in the College of Creative Studies at the University of California, Santa Barbara. Generally, I am interested in integrating genomics, computing, and field study to understand the processes that form and maintain biodiversity. More specific interests of mine include:
+        </p>
+        <p>
+        	<ul>
+            <li>Understanding the genomic basis of adaptive traits and adaptive speciation.</li>
+            <li>Developing computational methods to infer historical patterns of diversification and introgression from genomic data.</li>
+            </ul>
+
+
+        </p>
+        
+    </div>
+        
 </body>
 </html>

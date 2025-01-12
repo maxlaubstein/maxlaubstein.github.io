@@ -1,0 +1,135 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Laubstein</title>
+    <style>
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #ddd;
+        }
+    
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 80vh;
+            object-fit: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .content {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .content h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .image-container {
+            flex: 1;
+            max-width: 50%;
+	    justify-content: center;
+	    align-items: center; 
+        }
+
+        .image-container img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .image-container {
+                max-width: 100%;
+            }
+
+            header {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Max Laubstein
+    </header>
+            
+    <img src="pics/chiatovich.png" alt="Max Laubstein" class="hero-image">
+            
+    <div class="container">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>
+                I am an undergraduate studying evolutionary biology in the College of Creative Studies at the University of California, Santa Barbara. Generally, I am interested in integrating genomics, computing, and field study to understand the processes that form and maintain biodiversity. More specific interests of mine include:
+            </p>
+            <ul>
+                <li>Understanding the genomic basis of adaptive traits and adaptive speciation.</li>
+                <li>Developing computational methods to infer historical patterns of diversification and introgression across landscapes from genomic data.</li>
+            </ul>
+        </div>
+        
+        <div class="image-container">
+            <img src="pics/max.png" alt="Max Laubstein">
+        </div>
+    </div>
+        
+</body>
+</html>
+

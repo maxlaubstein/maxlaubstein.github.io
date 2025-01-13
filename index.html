@@ -3,71 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <a href="maxlaubstein.github.io">Max Laubstein</a> </title>
+    <title>Max Laubstein</title>
     <style>
-	    html, body {
+        /* Reset default margin and padding */
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-	    font-family: Arial, sans-serif;
-	    font-size: 18px
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        header a {
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        /* Image styles for "chiatovich" and other large images */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* "About Me" section layout */
+        .about-me {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            width: 100%;
+            padding: 15px;
+        }
+
+        .about-me div {
+            box-sizing: border-box;
+        }
+
+        .about-me .text {
+            width: 50%;
+            padding-right: 15px;
+        }
+
+        .about-me .image {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-me .image img {
+            width: 50%;
+            border-radius: 8px;
+        }
+
+        /* Clear floats */
+        .clear {
+            clear: both;
+            margin-bottom: 15px;
+        }
+
+        /* Cormorant image section */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+        .contact-info .image {
+            flex: 1;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-info .image img {
+            width: 70%;
+            border-radius: 8px;
+        }
+
+        .contact-info .text {
+            width: 50%;
+            text-align: center;
+            padding-left: 15px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header a {
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+
+            .about-me .text, .about-me .image {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .about-me .image img {
+                width: 80%;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info .image img {
+                width: 100%;
+            }
+
+            .contact-info .text {
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            img {
+                max-height: 70vh;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header a {
+                font-size: 18px;
+            }
+
+            .about-me .text {
+                padding: 10px;
+            }
+
+            .about-me .image img {
+                width: 90%;
+            }
+
+            .contact-info .image img {
+                width: 90%;
+            }
+
+            img {
+                max-height: 60vh;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
-    	<div style="float:left; background-color: #fff; color: #fff; padding: 15px 20px; text-align: left; font-size: 24px; font-weight: bold; border-bottom: 2px solid #ddd;">
-        	<a href="index.html" style="text-decoration:none; color:black">Max Laubstein</a>
+        <div>
+            <a href="index.html">Max Laubstein</a>
         </div>
-	<div style="float:right; background-color: #fff; color: #fff; padding: 15px 20px; text-align: right; font-size: 24px; font-weight: bold; border-bottom: 2px solid #ddd;">
-        	<a href="research.html" style="text-decoration:none; color:black">Research</a> 
-		<a href="talks.html" style="text-decoration:none; color:black">Talks</a> 
-		<a href="photos.html" style="text-decoration:none; color:black">Photos</a>
+        <div>
+            <a href="research.html">Research</a> 
+            <a href="talks.html">Talks</a> 
+            <a href="photos.html">Photos</a>
         </div>
     </header>
     
-	<img src="pics/chiatovich.png" alt="Max Laubstein" style="width: 100%;height: auto;display: block;max-height: 80vh;object-fit: cover; margin-bottom: 15px;">
+    <img src="pics/chiatovich.png" alt="Max Laubstein">
 
-	<div style="width: 100%; box-sizing: border-box; padding: 15px">
-		<div style="float:left; width: 50%; box-sizing: border-box">
-        		<h2 style="margin-bottom: 15px;">About Me</h2>
-       			<p style="margin-bottom: 15px;">I am an undergraduate studying evolutionary biology in the <a href="https://en.wikipedia.org/wiki/College_of_Creative_Studies" style="text-decoration:none; color:black">College of Creative Studies</a> at the University of California, Santa Barbara. Generally, I am interested in integrating genomics, computing, and field study to understand the processes that form and maintain biodiversity. More specific interests of mine include:</p>
-        			<ul style="margin-bottom: 15px;">
-            				<li>Understanding the genomic basis of adaptive traits and adaptive speciation.</li>
-            				<li>Developing computational methods to infer historical patterns of diversification and introgression across landscapes from genomic data.</li>
-        			</ul>
-        		<p>I am especially interested in birds, amphibians, and coastal fish, though I am open to exploring other wild systems that may provide useful insights. While I love all birds, everywhere, I have a strong affinity for Neotropical suboscinces and tubenose seabirds. Within amphibians, I am particularly a fanatic for Plethodontids, notably <i>Batrachoseps</i>.</p>
-    		</div>
+    <div class="about-me">
+        <div class="text">
+            <h2>About Me</h2>
+            <p>I am an undergraduate studying evolutionary biology in the <a href="https://en.wikipedia.org/wiki/College_of_Creative_Studies">College of Creative Studies</a> at the University of California, Santa Barbara. Generally, I am interested in integrating genomics, computing, and field study to understand the processes that form and maintain biodiversity. More specific interests of mine include:</p>
+            <ul>
+                <li>Understanding the genomic basis of adaptive traits and adaptive speciation.</li>
+                <li>Developing computational methods to infer historical patterns of diversification and introgression across landscapes from genomic data.</li>
+            </ul>
+            <p>I am especially interested in birds, amphibians, and coastal fish, though I am open to exploring other wild systems that may provide useful insights. While I love all birds, everywhere, I have a strong affinity for Neotropical suboscinces and tubenose seabirds. Within amphibians, I am particularly a fanatic for Plethodontids, notably <i>Batrachoseps</i>.</p>
+        </div>
+        <div class="image">
+            <img src="pics/max.png" alt="Max Laubstein">
+        </div>
+    </div>
 
-		<div style="float:right; flex: 1; width: 50%; display: flex">
-			<img src="pics/max.png" alt="Max Laubstein" style="width: 50%; margin: auto; border-radius: 8px;">
-		</div>
-	</div>
-	
-	<div style="clear:both; margin-bottom: 15px;"></div>
+    <div class="clear"></div>
 
-	<div style="width: 100%; box-sizing: border-box;">
-		<div style="float:left; flex: 1; width: 50%; display: flex">
-			<img src="pics/cormorant.jpg" alt="cormorant" style="width: 70%; margin: auto; border-radius: 8px;">
-		</div>
-		
-		<div style="float:right; width: 50%; box-sizing: border-box; text-align:center">
-			<h2 style="margin-bottom: 15px;">Contact Info</h2>
-			<p><a href="mailto:maxlaubstein@gmail.com" style="text-decoration:none; color:black">maxlaubstein@gmail.com</a></p>
-			<p><a href="https://scholar.google.com/citations?user=mLAA2DcAAAAJ&hl=en&oi=ao" style="text-decoration:none; color:black">Google Scholar</a></p>
-			
-		</div>
-		
-	</div>
-	
-	<div style="clear:both; margin-bottom: 15px;"></div>
-	
-	<img src="pics/Hplatycephalus.jpg" alt="Max Laubstein" style="width: 100%;height: auto;display: block;max-height: 80vh;object-fit: cover; margin-bottom: 15px;">
+    <div class="contact-info">
+        <div class="image">
+            <img src="pics/cormorant.jpg" alt="cormorant">
+        </div>
+        <div class="text">
+            <h2>Contact Info</h2>
+            <p><a href="mailto:maxlaubstein@gmail.com">maxlaubstein@gmail.com</a></p>
+            <p><a href="https://scholar.google.com/citations?user=mLAA2DcAAAAJ&hl=en&oi=ao">Google Scholar</a></p>
+        </div>
+    </div>
 
-	
-	
-		
+    <div class="clear"></div>
+    
+    <img src="pics/Hplatycephalus.jpg" alt="Max Laubstein">
 
 </body>
 </html>

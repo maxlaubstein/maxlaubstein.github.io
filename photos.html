@@ -41,6 +41,17 @@
             margin-bottom: 15px;
         }
 
+	div.scroll-container {
+  		background-color: #333;
+  		overflow: auto;
+  		white-space: nowrap;
+  		padding: 10px;
+	}
+
+	div.scroll-container img {
+  		padding: 10px;
+	}
+
         /* Responsive design for smaller screens */
         @media screen and (max-width: 768px) {
             header {
@@ -84,11 +95,11 @@
         </div>
     </header>
 
-    <div style="width: 100%;">
-	    <h2>Costa Rica & Guatemala 2024-2025</h2>
-	    	<img src="pics/DSTK.jpeg" alt="Max Laubstein" style="width:25%">
+    <div class="scroll-container">
+  	<img src="DSTK.jpeg" alt="DSTK">
+  	<img src="snowyplover.jpg" alt="Forest">  	
     </div>
-    <img src="pics/snowyplover.jpg" alt="Max Laubstein">
+    
 
     
 </body>

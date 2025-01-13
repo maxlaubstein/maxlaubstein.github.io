@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <a href="maxlaubstein.github.io">Max Laubstein</a> </title>
+    <style>
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
 
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .tabs {
+        	background-color: #fff;
+            color: #333;
+            padding: 15px 20px;
+            text-align: right;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #ddd;
+        }
+    
+        .hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 80vh;
+            object-fit: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .content {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .content h2 {
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .image-container {
+            flex: 1;
+            max-width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 50%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Contact Info Section */
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Side-by-Side Layout for Bird Image and Contact Info */
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .contact-container .image-container {
+            flex: 1;
+        }
+
+        .contact-container .contact-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+	.bottom-hero-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 80vh;
+            object-fit: cover;
+	    margin-top: 10px;
+        }
+
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .image-container {
+                max-width: 100%;
+            }
+
+            header {
+                font-size: 20px;
+            }
+
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-container .contact-info {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    	<div class="header">
+        	<a href="index.html">Max Laubstein</a>
+        </div>
+        <div class="tabs">
+        	<a href="https://ebird.org/profile/MTA1MjcyNQ/world">Research</a> - <a href="talks.html">Talks</a> - <a>Photos</a>
+        </div>
+    </header>
+            
+    <img src="pics/chiatovich.png" alt="Max Laubstein" class="hero-image">
+            
+    <div class="container">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>
+                I am an undergraduate studying evolutionary biology in the <a href="https://en.wikipedia.org/wiki/College_of_Creative_Studies">College of Creative Studies</a> at the University of California, Santa Barbara. Generally, I am interested in integrating genomics, computing, and field study to understand the processes that form and maintain biodiversity. More specific interests of mine include:
+            </p>
+            <ul>
+                <li>Understanding the genomic basis of adaptive traits and adaptive speciation.</li>
+                <li>Developing computational methods to infer historical patterns of diversification and introgression across landscapes from genomic data.</li>
+            </ul>
+            <p>
+                I am especially interested in birds, amphibians, and coastal fish, though I am open to exploring other wild systems that may provide useful insights. While I love all birds, everywhere, I have a strong affinity for Neotropical suboscinces and tubenose seabirds. Within amphibians, I am particularly a fanatic for Plethodontids, notably <i>Batrachoseps</i>.
+            </p>
+        </div>
+        
+        <div class="image-container">
+            <img src="pics/max.png" alt="Max Laubstein">
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="image-container">
+            <img src="pics/cormorant.jpg" alt="Cormorant Image">
+        </div>
+        <div class="contact-info">
+            <h2>Contact Info</h2>
+            <p>Email: <a href="mailto:maxlaubstein@gmail.com">maxlaubstein@gmail.com</a></p>
+            <p><a href="https://scholar.google.com/citations?user=mLAA2DcAAAAJ&hl=en&oi=ao">Google Scholar</a></p>
+        </div>
+    </div>
+    <img src="pics/Hplatycephalus.jpg" alt="Bottom Hero Image" class="bottom-hero-image">
+
+</body>
+</html>

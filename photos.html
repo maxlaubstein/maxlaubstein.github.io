@@ -3,38 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <a href="maxlaubstein.github.io">Max Laubstein</a> </title>
+    <title>Max Laubstein</title>
     <style>
-	    html, body {
+        /* Reset default margin and padding */
+        html, body {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
-	    font-family: Arial, sans-serif;
-	    font-size: 18px
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        header a {
+            text-decoration: none;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        /* Image styles for "chiatovich" and other large images */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header a {
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+
+        
+            img {
+                max-height: 70vh;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header a {
+                font-size: 18px;
+            }
+
+            img {
+                max-height: 60vh;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
-    	<div style="float:left; background-color: #fff; color: #fff; padding: 15px 20px; text-align: left; font-size: 24px; font-weight: bold; border-bottom: 2px solid #ddd;">
-        	<a href="index.html" style="text-decoration:none; color:black">Max Laubstein</a>
+        <div>
+            <a href="index.html">Max Laubstein</a>
         </div>
-	<div style="float:right; background-color: #fff; color: #fff; padding: 15px 20px; text-align: right; font-size: 24px; font-weight: bold; border-bottom: 2px solid #ddd;">
-        	<a href="research.html" style="text-decoration:none; color:black">Research</a> 
-		<a href="talks.html" style="text-decoration:none; color:black">Talks</a> 
-		<a href="photos.html" style="text-decoration:none; color:black">Photos</a>
+        <div>
+            <a href="research.html">Research</a> 
+            <a href="talks.html">Talks</a> 
+            <a href="photos.html">Photos</a>
         </div>
     </header>
+
+    <h1>AOS 2024</h1>
+    <iframe width="100%" height="100%" src="https://drive.google.com/file/d/1Ns8LvCcHFA5TnjWcA1IuVyEzQOAp3mxN/view?usp=sharing"></iframe>
+
+    <div style="width: 100%;">
+	    <h2>Costa Rica & Guatemala 2024-2025</h2>
+	    	<img src="pics/snowyplover.jpg" alt="Max Laubstein">
+    </div>
+    <img src="pics/snowyplover.jpg" alt="Max Laubstein">
+
     
-
-	
-	<img src="pics/Hplatycephalus.jpg" alt="Max Laubstein" style="width: 100%;height: auto;display: block;max-height: 80vh;object-fit: cover; margin-bottom: 15px;">
-
-	
-	
-		
-
 </body>
 </html>
-

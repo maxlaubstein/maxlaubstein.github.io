@@ -40,6 +40,7 @@
             font-size: 24px;
             font-weight: bold;
             margin-left: 15px;
+            margin-right: 15px;
         }
 
         /* Ensure "Things" and other links fit */
@@ -47,7 +48,90 @@
             display: flex;
             flex-wrap: wrap; /* Wrap items if they don't fit */
         }
-/* Responsive design for smaller screens */
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .about-me {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 15px;
+            margin-top: 40px; /* Adjusted to clear the header */
+        }
+
+        .about-me div {
+            box-sizing: border-box;
+        }
+
+        .about-me .text {
+            width: 60%;
+            padding-right: 15px;
+        }
+
+        .about-me .image {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-me .image img {
+            width: 50%;
+            border-radius: 8px;
+        }
+
+        /* Clear floats */
+        .clear {
+            clear: both;
+            margin-bottom: 15px;
+        }
+
+        /* Cormorant image section */
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            justify-content: center; /* Centers the content */
+            margin-top: 15px; /* Reduced margin to get rid of the large gap */
+        }
+
+        .contact-info .image {
+            flex: 1;
+            width: 50%; /*test*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-info .image img {
+            width: 60%;
+            border-radius: 8px;
+        }
+
+        .contact-info .text {
+            width: 40%;
+            text-align: center;
+            padding-left: 15px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Responsive design for smaller screens */
         @media screen and (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -59,14 +143,57 @@
                 margin-bottom: 10px;
                 font-size: 20px;
             }
+
+            .about-me .text, .about-me .image {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .about-me .image img {
+                width: 80%;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info .image img {
+                width: 100%;
+            }
+
+            .contact-info .text {
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            img {
+                max-height: 70vh;
+            }
         }
 
         @media screen and (max-width: 480px) {
             header a {
                 font-size: 18px;
             }
-        }
 
+            .about-me .text {
+                padding: 10px;
+            }
+
+            .about-me .image img {
+                width: 90%;
+            }
+
+            .contact-info .image img {
+                width: 90%;
+            }
+
+            img {
+                max-height: 60vh;
+            }
+        }
     </style>
 </head>
 <body>

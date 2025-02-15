@@ -43,6 +43,12 @@
             margin-left: 15px;
         }
 
+        /* Ensure "Things" and other links fit */
+        header div {
+            display: flex;
+            flex-wrap: wrap; /* Wrap items if they don't fit */
+        }
+
         img {
             width: 100%;
             height: auto;
@@ -94,6 +100,7 @@
             box-sizing: border-box;
             padding: 15px;
             justify-content: center; /* Centers the content */
+            margin-top: 15px; /* Reduced margin to get rid of the large gap */
         }
 
         .contact-info .image {

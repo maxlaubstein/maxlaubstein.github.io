@@ -1,213 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Laubstein</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Max Laubstein</title>
 
-    <!-- Import Poppins font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Import Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
-    <style>
-        /* Reset default margin and padding */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            box-sizing: border-box; /* Ensures padding and borders don't cause overflow */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
 
-        /* Header styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent */
-            border: none;
-            margin: 0;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
 
-        header a {
-            text-decoration: none;
-            color: black;
-            font-size: 24px;
-            font-weight: bold;
-            margin-left: 15px;
-            margin-right: 15px;
-        }
+    header a {
+      text-decoration: none;
+      color: black;
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
 
-        /* Ensure "Things" and other links fit */
-        header div {
-            display: flex;
-            flex-wrap: wrap; /* Wrap items if they don't fit */
-        }
+    header div {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
 
-        .about-me {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            padding: 15px;
-            margin-top: 40px; /* Adjusted to clear the header */
-        }
+    /* New image-text section */
+    .section {
+      display: flex;
+      max-width: 1000px;
+      margin: 150px auto 50px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        .about-me div {
-            box-sizing: border-box;
-        }
+    .section .image {
+      width: 33.33%;
+      padding-right: 20px;
+    }
 
-        .about-me .text {
-            width: 60%;
-            padding-right: 15px;
-        }
+    .section .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-        .about-me .image {
-            width: 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .section .text {
+      width: 66.67%;
+    }
 
-        .about-me .image img {
-            width: 50%;
-            border-radius: 8px;
-        }
+    .section .text h2 {
+      margin-top: 0;
+      font-weight: 600;
+    }
 
-        /* Clear floats */
-        .clear {
-            clear: both;
-            margin-bottom: 15px;
-        }
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-        /* Cormorant image section */
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            box-sizing: border-box;
-            padding: 15px;
-            justify-content: center; /* Centers the content */
-            margin-top: 15px; /* Reduced margin to get rid of the large gap */
-        }
+      header a {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
 
-        .contact-info .image {
-            flex: 1;
-            width: 50%; /*test*/
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      .section {
+        flex-direction: column;
+      }
 
-        .contact-info .image img {
-            width: 60%;
-            border-radius: 8px;
-        }
+      .section .image,
+      .section .text {
+        width: 100%;
+        padding: 0;
+      }
 
-        .contact-info .text {
-            width: 40%;
-            text-align: center;
-            padding-left: 15px;
-        }
+      .section .image {
+        margin-bottom: 20px;
+      }
+    }
 
-        .contact-info h2 {
-            margin-bottom: 15px;
-        }
+    @media screen and (max-width: 480px) {
+      header a {
+        font-size: 18px;
+      }
 
-        .contact-info a {
-            text-decoration: none;
-            color: black;
-        }
-
-        /* Responsive design for smaller screens */
-        @media screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            header a {
-                margin-bottom: 10px;
-                font-size: 20px;
-            }
-
-            .about-me .text, .about-me .image {
-                width: 100%;
-                padding-right: 0;
-            }
-
-            .about-me .image img {
-                width: 80%;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-info .image img {
-                width: 100%;
-            }
-
-            .contact-info .text {
-                width: 100%;
-                padding-left: 0;
-                text-align: center;
-            }
-
-            img {
-                max-height: 70vh;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            header a {
-                font-size: 18px;
-            }
-
-            .about-me .text {
-                padding: 10px;
-            }
-
-            .about-me .image img {
-                width: 90%;
-            }
-
-            .contact-info .image img {
-                width: 90%;
-            }
-
-            img {
-                max-height: 60vh;
-            }
-        }
-    </style>
+      img {
+        max-height: 60vh;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div>
-            <a href="index.html">Max Laubstein</a>
-        </div>
-        <div>
-            <a href="research.html">Research</a> 
-            <a href="talks.html">Talks</a> 
-            <a href="things.html">Things</a>
-        </div>
-    </header>
-    
+  <header>
+    <div>
+      <a href="index.html">Max Laubstein</a>
+    </div>
+    <div>
+      <a href="research.html">Research</a>
+      <a href="talks.html">Talks</a>
+      <a href="things.html">Things</a>
+    </div>
+  </header>
+
+  <!-- Image + Text Section -->
+  <div class="section">
+    <div class="image">
+      <img src="pics/STJA.png" alt="STJA">
+    </div>
+    <div class="text">
+      <h2>Rangewide Genomics of Steller's Jays</h2>
+      <p>
+        qwerty
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>

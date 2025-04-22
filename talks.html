@@ -1,150 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Laubstein</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Max Laubstein</title>
 
-    <!-- Import Poppins font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Import Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
-    <style>
-        /* Reset default margin and padding */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            box-sizing: border-box; /* Ensures padding and borders don't cause overflow */
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
 
-        /* Header styles */
-        header {
-            display: flex;
-            justify-content: space-between;
-            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent */
-            border: none;
-            margin: 0;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
 
-        header a {
-            text-decoration: none;
-            color: black;
-            font-size: 24px;
-            font-weight: bold;
-            margin-left: 15px;
-            margin-right: 15px;
-        }
+    header a {
+      text-decoration: none;
+      color: black;
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
 
-        /* Ensure "Things" and other links fit */
-        header div {
-            display: flex;
-            flex-wrap: wrap; /* Wrap items if they don't fit */
-        }
+    header div {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
 
-        .talks {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-            padding: 15px;
-            margin-top: 40px; /* Adjusted to clear the header */
-        }
+    /* New image-text section */
+    .section {
+      display: flex;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      padding: 20px;
+    }
 
-        .talks .AOS {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .talks .APTF {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .section .vid {
+      width: 45%;
+    }
 
-       
-        /* Clear floats */
-        .clear {
-            clear: both;
-            margin-bottom: 15px;
-        }
+    .section .text {
+      width: 55%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
+    .section .text h2 {
+      margin-top: 0;
+      font-weight: 300;
+    }
+  
 
-        /* Responsive design for smaller screens */
-        @media screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-            header a {
-                margin-bottom: 10px;
-                font-size: 20px;
-            }
-        }
+      header a {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
 
-            
+      .section {
+        flex-direction: column;
+      }
 
-        @media screen and (max-width: 480px) {
-            header a {
-                font-size: 18px;
-            }
-        }
-    </style>
+      .section .image,
+      .section .text {
+        width: 100%;
+        padding: 0;
+      }
+
+      .section .image {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      header a {
+        font-size: 18px;
+      }
+
+      img {
+        max-height: 60vh;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div>
-            <a href="index.html">Max Laubstein</a>
-        </div>
-        <div>
-            <a href="research.html">Research</a> 
-            <a href="talks.html">Talks</a> 
-            <a href="things.html">Things</a>
-        </div>
-    </header>
-
-<img src="pics/Hplatycephalus.jpg" alt="Max Laubstein">
-
-    <div class="talks">
-        <div class="AOS">
-            <h2>
-                Steller's Jay Talk at AOS 2024
-            </h2>
-            <iframe width="420" height="315"
-                src="https://www.youtube.com/embed/oFsR2PFfVPg">
-            </iframe>
-        </div>
-
-        <div class="APTF">
-            <h2>
-                Plethopsis Talk at APTF 2025
-            </h2>
-            <iframe width="420" height="315"
-                src="https://www.youtube.com/embed/kjytWCAPU6k">
-            </iframe>
-        </div>
+  <header>
+    <div>
+      <a href="index.html">Max Laubstein</a>
     </div>
+    <div>
+      <a href="research.html">Research</a>
+      <a href="talks.html">Talks</a>
+      <a href="things.html">Things</a>
+    </div>
+  </header>
+  
+    <img src="pics/Hplatycephalus.jpg" alt="Max Laubstein">
 
-    
+  <h1 style="text-align: center; font-weight: 400;">Talks</h1>
+  
+  <!-- Image + Text Section -->
+  <div class="section">
+    <div class="vid">
+      <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/oFsR2PFfVPg">
+      </iframe>
+    </div>
+    <div class="text">
+      <h2>aos</h2>
+      <p>
+          aos
+      </p>
+    </div>
+  </div>
+<div class="section">
+    <div class="vid">
+      <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/kjytWCAPU6k">
+      </iframe>
+    </div>
+    <div class="text">
+      <h2>aos</h2>
+      <p>
+          aos
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>
